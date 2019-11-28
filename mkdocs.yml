@@ -1,0 +1,66 @@
+site_name: oms运维管理系统
+site_description: '运维自动化 python salt django zabbix oms'
+site_url: 'https://itimor.github.io/django-oms/'
+
+repo_name: 'GitHub'
+repo_url: 'https://github.com/itimor/django-oms'
+
+dev_addr: 0.0.0.0:5000
+
+theme:
+  name: null
+  custom_dir: themes/itimor
+  show_edit: false
+  logo: 'assets/images/favicon.ico'
+  static_templates:
+    - 404.html
+  feature:
+    tabs: true
+  language: zh
+  palette:
+    primary: cyan
+    accent: purple
+  font:
+    text: Hind Siliguri
+    code: Noto Sans
+
+google_analytics: ['UA-119111951-1', 'django-oms']
+    
+copyright: "Copyright @ <a href='https://github.com/itimor/'>Itimor</a>"
+
+use_directory_urls: true
+
+markdown_extensions:
+    - admonition
+    - toc:
+        permalink: (ง •̀_•́)ง
+    - footnotes
+    - meta
+    - def_list
+    - pymdownx.arithmatex
+    - pymdownx.betterem(smart_enable=all)
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_png
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.tasklist
+    - pymdownx.tilde
+
+pages:
+  - Home: index.md
+  - Oms: 
+    - 开始: oms/index.md
+    - 基础模块: oms/base.md
+    - salt与主机: oms/host.md
+    - dns和zabbix: oms/dns.md
+    - 工单和考勤: oms/oa.md
+  - Problem: problem.md
+
+extra_css:
+
+extra_javascript:
