@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import serializers
-from dnsmanager.models import DnsApiKey, DnsDomain, DnsRecord
+from apps.dnsmanager.models import DnsApiKey, DnsDomain, DnsRecord
 
 
 class DnsApiKeySerializer(serializers.ModelSerializer):

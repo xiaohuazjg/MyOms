@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
-from wikis.models import Wiki, admin_groups
-from users.models import User, Group
-from perms.models import UserWikiPerms
+from apps.wikis.models import Wiki, admin_groups
+from apps.users.models import User, Group
+from apps.perms.models import UserWikiPerms
 from dry_rest_permissions.generics import DRYPermissionFiltersBase
 
 

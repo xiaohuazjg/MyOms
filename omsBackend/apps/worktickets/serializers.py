@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # author: kiven
 
-from worktickets.models import WorkTicket, TicketComment, TicketEnclosure, TicketType
+from apps.worktickets.models import WorkTicket, TicketComment, TicketEnclosure, TicketType
 from rest_framework import serializers
-from users.models import User, Group
-from tools.models import Upload
+from apps.users.models import User, Group
+from apps.tools.models import Upload
 
 
 class WorkTicketSerializer(serializers.ModelSerializer):

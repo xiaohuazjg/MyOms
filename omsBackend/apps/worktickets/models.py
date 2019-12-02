@@ -2,8 +2,8 @@
 # author: kiven
 
 from django.db import models
-from users.models import User, Group
-from tools.models import Upload
+from apps.users.models import User, Group
+from apps.tools.models import Upload
 
 
 TicketLevel = {

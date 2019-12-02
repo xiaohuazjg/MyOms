@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import viewsets
-from jobs.models import Jobs, Deployenv, Deploycmd, DeployJobs, DeployTicket, DeployTicketEnclosure, SqlTicket, DeployResults
-from jobs.serializers import (JobsSerializer, DeployenvSerializer, DeploycmdSerializer, DeployJobsSerializer,
-                              DeployTicketSerializer, DeployTicketEnclosureSerializer, SqlTicketSerializer, DeployResultsSerializer)
+from apps.jobs.models import Jobs, Deployenv, Deploycmd, DeployJobs, DeployTicket, \
+                            DeployTicketEnclosure, SqlTicket, DeployResults
+from apps.jobs.serializers import (JobsSerializer, DeployenvSerializer, DeploycmdSerializer,
+                                   DeployJobsSerializer, DeployTicketSerializer,
+                                   DeployTicketEnclosureSerializer, SqlTicketSerializer,
+                                   DeployResultsSerializer)
 from omsBackend.settings import sapi
 # from jobs.filters import JobFilterBackend, SqlTicketFilterBackend
 # from rest_framework.filters import SearchFilter, DjangoFilterBackend
+
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 import json

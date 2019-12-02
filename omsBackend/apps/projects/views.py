@@ -2,9 +2,9 @@
 # author: kiven
 
 from rest_framework import viewsets
-from projects.models import Project, ProjectComment, ProjectEnclosure, ProjectType, BugManager, TestManager, \
+from apps.projects.models import Project, ProjectComment, ProjectEnclosure, ProjectType, BugManager, TestManager, \
     DemandManager, DemandEnclosure, ProjectComplete
-from projects.serializers import (ProjectSerializer,
+from apps.projects.serializers import (ProjectSerializer,
                                   ProjectCommentSerializer,
                                   ProjectEnclosureSerializer,
                                   ProjectTypeSerializer,
@@ -13,10 +13,10 @@ from projects.serializers import (ProjectSerializer,
                                   DemandManagerSerializer,
                                   DemandEnclosureSerializer,
                                   ProjectCompleteSerializer)
-from projects.filters import ProjectFilterBackend
+from apps.projects.filters import ProjectFilterBackend
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
-from projects.filters import ProjectFilter
+from apps.projects.filters import ProjectFilter
 
 
 class ProjectViewSet(viewsets.ModelViewSet):

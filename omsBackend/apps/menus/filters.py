@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from django_filters import rest_framework as filters
-from menus.models import Firstmenu, Secondmenu, Element
+from apps.menus.models import Firstmenu, Secondmenu, Element
 
 
 class FirstmenuFilter(filters.FilterSet):

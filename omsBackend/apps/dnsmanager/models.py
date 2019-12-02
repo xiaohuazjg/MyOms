@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from django.db import models
 from django.utils import timezone

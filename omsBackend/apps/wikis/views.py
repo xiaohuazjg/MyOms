@@ -2,9 +2,9 @@
 # author: kiven
 
 from rest_framework import viewsets
-from wikis.models import Wiki
-from wikis.serializers import WikiSerializer
-from wikis.filters import WikiFilterBackend
+from apps.wikis.models import Wiki
+from apps.wikis.serializers import WikiSerializer
+from apps.wikis.filters import WikiFilterBackend
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 

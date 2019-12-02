@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from __future__ import unicode_literals
 import requests
@@ -15,7 +15,7 @@ class BindApi(object):
         self.token = token
         self.headers = {
             "Content-type": "application/x-www-form-urlencoded",
-            'User-Agent': 'itimor@126.com',
+            'User-Agent': 'huashaw@126.com',
         }
 
         # url
@@ -109,5 +109,5 @@ if __name__ == '__main__':
     from dnsapi_conf import BIND_KEYINFO
 
     bindapi = BindApi(user=BIND_KEYINFO['user'], pwd=BIND_KEYINFO['pwd'])
-    data = {'name': 'itimor.ph'}
+    data = {'name': 'huashaw.ph'}
     print(bindapi.get_domains())

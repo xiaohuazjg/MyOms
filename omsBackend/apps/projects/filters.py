@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
-from projects.models import admin_groups, Project
-from users.models import User
+from apps.projects.models import admin_groups, Project
+from apps.users.models import User
 from django.db.models import Q
 from dry_rest_permissions.generics import DRYPermissionFiltersBase
 
 from django_filters import rest_framework as filters
 from django_filters import DateFromToRangeFilter, CharFilter
-from projects.models import Project
+from apps.projects.models import Project
 
 
 class ProjectFilter(filters.FilterSet):

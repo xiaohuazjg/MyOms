@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: kiven
+# author: huashaw
 
 import os
 import sys
@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django_python3_ldap',  # ldap认证
     'dry_rest_permissions',  # 权限
     'django_celery_results',  # celery results
-    'users',
+    'apps.users',
     'apps.worktickets',
     'apps.menus',
     'apps.perms',
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'apps.jobs',
     'apps.salts',
     'apps.records',
+    'apps.computer_room',
+
 ]
 
 MIDDLEWARE = [

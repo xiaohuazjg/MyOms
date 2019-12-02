@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from django.db import models
-from menus.models import Firstmenu, Secondmenu, Element
-from users.models import User, Group
-from hosts.models import Host, HostGroup
-from wikis.models import Wiki
+from apps.menus.models import Firstmenu, Secondmenu, Element
+from apps.users.models import User, Group
+from apps.hosts.models import Host, HostGroup
+from apps.wikis.models import Wiki
+
 
 class UserMenuPerms(models.Model):
     group = models.CharField(max_length=64, unique=True, verbose_name=u'部门')

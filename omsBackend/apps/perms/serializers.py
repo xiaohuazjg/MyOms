@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import serializers
 
-from perms.models import UserMenuPerms, UserHostPerms, UserWikiPerms
-from menus.models import Firstmenu, Secondmenu, Element
-from users.models import Group
-from hosts.models import Host
-from wikis.models import Wiki
+from apps.perms.models import UserMenuPerms, UserHostPerms, UserWikiPerms
+from apps.menus.models import Firstmenu, Secondmenu, Element
+from apps.users.models import Group
+from apps.hosts.models import Host
+from apps.wikis.models import Wiki
 
 
 class UserMenuPermsSerializer(serializers.ModelSerializer):

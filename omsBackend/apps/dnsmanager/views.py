@@ -3,13 +3,13 @@
 
 from rest_framework import viewsets
 from rest_framework.response import Response
-from dnsmanager.models import DnsApiKey, DnsDomain, DnsRecord
-from dnsmanager.serializers import DnsApiKeySerializer, DnsDomainSerializer, DnsRecordSerializer
-from dnsmanager.serializers import DnspodDomainSerializer, DnspodRecordSerializer, GodaddyDomainSerializer, \
+from apps.dnsmanager.models import DnsApiKey, DnsDomain, DnsRecord
+from apps.dnsmanager.serializers import DnsApiKeySerializer, DnsDomainSerializer, DnsRecordSerializer
+from apps.dnsmanager.serializers import DnspodDomainSerializer, DnspodRecordSerializer, GodaddyDomainSerializer, \
     GodaddyRecordSerializer, BindDomainSerializer, BindRecordSerializer
-from dnsmanager.dnspod_api import DnspodApi
-from dnsmanager.godaddy_api import GodaddyApi
-from dnsmanager.bind_api import BindApi
+from apps.dnsmanager.dnspod_api import DnspodApi
+from apps.dnsmanager.godaddy_api import GodaddyApi
+from apps.dnsmanager.bind_api import BindApi
 from rest_framework.permissions import AllowAny
 
 

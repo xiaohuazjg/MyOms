@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import viewsets
-from hosts.models import Host, Idc, HostGroup
-from hosts.serializers import HostSerializer, IdcSerializer, HostGroupSerializer
+from apps.hosts.models import Host, Idc, HostGroup
+from apps.hosts.serializers import HostSerializer, IdcSerializer, HostGroupSerializer
 from rest_framework.response import Response
-from records.models import Record
+from apps.records.models import Record
 import json_tools
-from hosts.filters import HostFilterBackend
+from apps.hosts.filters import HostFilterBackend
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 from utils.tools import removeNone

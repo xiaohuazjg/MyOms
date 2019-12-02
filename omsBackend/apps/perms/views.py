@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import viewsets
-from perms.models import UserMenuPerms, UserHostPerms, UserWikiPerms
-from perms.serializers import UserMenuPermsSerializer, UserHostPermsSerializer, UserWikiPermsSerializer
+from apps.perms.models import UserMenuPerms, UserHostPerms, UserWikiPerms
+from apps.perms.serializers import UserMenuPermsSerializer, UserHostPermsSerializer, UserWikiPermsSerializer
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from users.models import User, Group
-from users.serializers import UserSerializer, RoleSerializer, GroupSerializer
-from perms.filters import UserMenuPermsFilter
+from apps.users.models import User, Group
+from apps.users.serializers import UserSerializer, RoleSerializer, GroupSerializer
+from apps.perms.filters import UserMenuPermsFilter
 
 
 class UserMenuPermsViewSet(viewsets.ModelViewSet):

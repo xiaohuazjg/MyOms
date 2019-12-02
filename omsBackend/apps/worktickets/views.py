@@ -2,12 +2,12 @@
 # author: kiven
 
 from rest_framework import viewsets
-from worktickets.models import WorkTicket, TicketComment, TicketEnclosure, TicketType
-from worktickets.serializers import (WorkTicketSerializer,
+from apps.worktickets.models import WorkTicket, TicketComment, TicketEnclosure, TicketType
+from apps.worktickets.serializers import (WorkTicketSerializer,
                                      TicketCommentSerializer,
                                      TicketEnclosureSerializer,
                                      TicketTypeSerializer)
-from worktickets.filters import WorkTicketFilterBackend
+from apps.worktickets.filters import WorkTicketFilterBackend
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from dry_rest_permissions.generics import DRYPermissions

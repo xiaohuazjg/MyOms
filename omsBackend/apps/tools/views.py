@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
-from tools.models import Upload, Sendmail, Sendmessage, Calender, FileUpload
-from tools.serializers import UploadSerializer, SendmailSerializer, SendmessageSerializer, CalenderSerializer, FileUploadSerializer
-from users.models import User
-from tasks.tasks import send_to_skype, send_to_mail
-from tools.filters import CalenderFilter
+from apps.tools.models import Upload, Sendmail, Sendmessage, Calender, FileUpload
+from apps.tools.serializers import UploadSerializer, SendmailSerializer, SendmessageSerializer, CalenderSerializer, FileUploadSerializer
+from apps.users.models import User
+from apps.tasks.tasks import send_to_skype, send_to_mail
+from apps.tools.filters import CalenderFilter
 from rest_framework.permissions import AllowAny
 from django.views.decorators.csrf import csrf_exempt
 

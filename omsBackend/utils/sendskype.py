@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 # 登录skype
 from skpy import Skype
@@ -8,7 +8,7 @@ from skpy import Skype
 
 
 SK_ACOUNT = {
-    'sk_user': 'itimor@126.com',
+    'sk_user': 'huashaw@126.com',
     'sk_pass': 'xx'
 }
 #SK = Skype(SK_ACOUNT["sk_user"], SK_ACOUNT["sk_pass"])

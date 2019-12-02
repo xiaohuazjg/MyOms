@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
-from menus.models import Firstmenu, Secondmenu, Element
+from apps.menus.models import Firstmenu, Secondmenu, Element
 from rest_framework import serializers
 
 

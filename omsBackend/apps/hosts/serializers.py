@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import serializers
-from hosts.models import Host, Idc, HostGroup
+from apps.hosts.models import Host, Idc, HostGroup
 
 
 class HostSerializer(serializers.ModelSerializer):

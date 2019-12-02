@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 import platform
 import psutil

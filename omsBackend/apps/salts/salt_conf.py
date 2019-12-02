@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 salt_info = {
     "url": "http://salt.oms.com/api/",

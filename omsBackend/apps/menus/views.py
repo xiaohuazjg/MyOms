@@ -2,9 +2,9 @@
 # author: kiven
 
 from rest_framework import viewsets
-from menus.models import Firstmenu, Secondmenu, Element
-from menus.serializers import FirstmenuSerializer, SecondmenuSerializer, ElementSerializer
-from menus.filters import FirstmenuFilter, SecondmenuFilter, ElementFilter
+from apps.menus.models import Firstmenu, Secondmenu, Element
+from apps.menus.serializers import FirstmenuSerializer, SecondmenuSerializer, ElementSerializer
+from apps.menus.filters import FirstmenuFilter, SecondmenuFilter, ElementFilter
 
 
 class FirstmenuViewSet(viewsets.ModelViewSet):

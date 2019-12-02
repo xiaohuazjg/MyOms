@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import viewsets
-from records.models import Record
-from records.serializers import RecordSerializer
-from records.filters import RecordFilter
+from apps.records.models import Record
+from apps.records.serializers import RecordSerializer
+from apps.records.filters import RecordFilter
 
 
 class RecordViewSet(viewsets.ModelViewSet):

@@ -2,8 +2,8 @@
 # author: kiven
 
 from rest_framework import viewsets
-from users.serializers import UserSerializer, RoleSerializer, GroupSerializer
-from users.models import User, Role, Group
+from apps.users.serializers import UserSerializer, RoleSerializer, GroupSerializer
+from apps.users.models import User, Role, Group
 
 
 class UserViewSet(viewsets.ModelViewSet):

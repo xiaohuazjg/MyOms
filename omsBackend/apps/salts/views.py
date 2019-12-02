@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from omsBackend.settings import sapi
-from salts.models import SaltState, StateJob, SaltStateGroup, SaltServer
-from salts.serializers import SaltStateSerializer, StateJobSerializer, SaltStateGroupSerializer, SaltServerSerializer
-from hosts.models import Host
-from records.models import Record
+from apps.salts.models import SaltState, StateJob, SaltStateGroup, SaltServer
+from apps.salts.serializers import SaltStateSerializer, StateJobSerializer, SaltStateGroupSerializer, SaltServerSerializer
+from apps.hosts.models import Host
+from apps.records.models import Record
 import json_tools
 from utils.tools import removeNone
 from rest_framework import viewsets

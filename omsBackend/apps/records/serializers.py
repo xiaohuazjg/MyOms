@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import serializers
-from records.models import Record
+from apps.records.models import Record
 
 
 class RecordSerializer(serializers.ModelSerializer):

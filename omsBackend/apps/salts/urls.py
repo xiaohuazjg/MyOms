@@ -2,7 +2,7 @@
 # author: kiven
 
 from django.conf.urls import url
-from salts import views
+from apps.salts import views
 
 urlpatterns = [
     url(r'^get_all_key/', views.get_all_key),

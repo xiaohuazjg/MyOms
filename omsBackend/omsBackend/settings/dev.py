@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
+from .base import *
 import os
+
 DEBUG = True
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -18,9 +20,9 @@ DATABASES = {
         'PASSWORD': '2uLaxa',  # 密码
         'HOST': '192.168.0.11',  # mysql服务所在的主机ip
         'PORT': '3306',  # mysql服务端口
-        'OPTIONS': {
-            "init_command": "SET storage_engine=INNODB;SET sql_mode='STRICT_TRANS_TABLES'"
-        },
+        # 'OPTIONS': {
+        #     "init_command": "SET storage_engine=INNODB;SET sql_mode='STRICT_TRANS_TABLES'"
+        # },
 
     }
 
@@ -107,7 +109,7 @@ salt_info = {
 #     "password": "123456"
 # }
 
-from salts.saltapi import SaltAPI
+from apps.salts.saltapi import SaltAPI
 
 sapi = SaltAPI(url=salt_info["url"], username=salt_info["username"], password=salt_info["password"])
 
@@ -117,7 +119,7 @@ sapi = SaltAPI(url=salt_info["url"], username=salt_info["username"], password=sa
 #     print(e)
 #     sapi = 'sapi'
 
-from zbmanager.zabbix_api import ZabbixApi
+from apps.zbmanager.zabbix_api import ZabbixApi
 
 zabbix_info = {
     'apiurl': 'http://zabbix.oms.com/api_jsonrpc.php',

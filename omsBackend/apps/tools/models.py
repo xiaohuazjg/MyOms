@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from django.db import models
-from tools.filesize import convert_size
-from tools.storage import PathAndRename
+from apps.tools.filesize import convert_size
+from apps.tools.storage import PathAndRename
 import os
 
 

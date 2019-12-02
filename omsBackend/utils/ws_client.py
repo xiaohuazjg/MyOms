@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from websocket import create_connection
 
@@ -8,6 +8,6 @@ print("Sending 'Hello, World'...")
 ws.send("Hello, World")
 print("Sent")
 print("Reeiving...")
-result =  ws.recv()
+result = ws.recv()
 print("Received '%s'" % result)
 ws.close()

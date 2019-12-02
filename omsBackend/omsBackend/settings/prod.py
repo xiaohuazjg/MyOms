@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 import os
 DEBUG = False
@@ -95,11 +95,11 @@ salt_info = {
     "password": "saltapi"
 }
 
-from salts.saltapi import SaltAPI
+from apps.salts.saltapi import SaltAPI
 
 sapi = SaltAPI(url=salt_info["url"], username=salt_info["username"], password=salt_info["password"])
 
-from zbmanager.zabbix_api import ZabbixApi
+from apps.zbmanager.zabbix_api import ZabbixApi
 
 zabbix_info = {
     'apiurl': 'http://zabbix.oms.com/api_jsonrpc.php',

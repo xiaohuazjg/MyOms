@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from django_filters import rest_framework as filters
-from perms.models import UserMenuPerms
+from apps.perms.models import UserMenuPerms
 
 
 class UserMenuPermsFilter(filters.FilterSet):

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from django_filters import rest_framework as filters
 from django_filters import DateFromToRangeFilter
-from records.models import Record
+from apps.records.models import Record
 
 
 class RecordFilter(filters.FilterSet):

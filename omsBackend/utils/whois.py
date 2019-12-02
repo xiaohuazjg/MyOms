@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 import requests
 import json
@@ -13,7 +13,7 @@ def whois(domain):
     if d["whoisFlag"] == 'false':
         create_time = datetime.now()
         expire_time = datetime.now()
-        dnsService = 'www.itimor.cn'
+        dnsService = 'www.huashaw.cn'
     else:
         create_time = datetime.strptime(d["whois_registrantDate"],
                                         get_time_format(d["whois_registrantDate"])) + timedelta(
@@ -36,4 +36,4 @@ def get_time_format(time):
 
 
 if __name__ == '__main__':
-    print(whois('itimor.com'))
+    print(whois('huashaw.com'))

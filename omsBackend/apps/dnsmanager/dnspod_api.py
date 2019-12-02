@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from __future__ import unicode_literals
 import requests
@@ -67,7 +67,7 @@ class DnspodApi(object):
         """
         将 方法,基础url,参数合并成 url请求,并向服务器发送获取结果然后返回
         """
-        user_agent = "itimor@126.com"
+        user_agent = "huashaw@126.com"
         auth_param = self.auth_param()
         if param_data:
             params = dict(auth_param, **param_data)
@@ -202,4 +202,4 @@ if __name__ == '__main__':
     initlog('./dnsapi.log')
     dnsapi = DnspodApi(user=DMSPOD_KEYINFO['user'], pwd=DMSPOD_KEYINFO['pwd'])
     record_id = 353763350
-    print(dnsapi.get_record_id('itimor.com', 'aaa', '1.1.1.6', 'A'))
+    print(dnsapi.get_record_id('huashaw.com', 'aaa', '1.1.1.6', 'A'))

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from celery import shared_task
 from utils.sendskype import skype_bot

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
-from jobs.models import Jobs, admin_groups, SqlTicket, sql_admin_groups
-from users.models import User
+from apps.jobs.models import Jobs, admin_groups, SqlTicket, sql_admin_groups
+from apps.users.models import User
 from dry_rest_permissions.generics import DRYPermissionFiltersBase
 
 

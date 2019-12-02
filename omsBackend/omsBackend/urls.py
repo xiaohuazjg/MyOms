@@ -9,9 +9,9 @@ from django.views.generic.base import TemplateView
 
 from omsBackend import settings
 from omsBackend.routerApi import router
-from perms.views import routers
-from jobs.views import update_jobs_status
-from salts.views import update_states_status, get_state_bygroup
+from apps.perms.views import routers
+from apps.jobs.views import update_jobs_status
+from apps.salts.views import update_states_status, get_state_bygroup
 
 urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     url(r'^api/', include(router.urls)),
@@ -21,7 +21,7 @@ urlpatterns = static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + [
     url(r'^api/get_state_bygroup/', get_state_bygroup, name="get_state_bygroup"),
 
     # salt
-    url(r'^api/salts/', include('salts.urls')),
+    url(r'^api/salts/', include('apps.salts.urls')),
 
     # 用户认证
     url(r'^api/changepasswd/', PasswordChangeView.as_view(), name='changepasswd'),

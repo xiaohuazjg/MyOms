@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 # author: kiven
 
-from projects.models import Project, ProjectComment, ProjectEnclosure, ProjectType, BugManager, TestManager, \
-    DemandManager, DemandEnclosure, ProjectComplete
+from apps.projects.models import Project, ProjectComment, ProjectEnclosure, ProjectType, BugManager, TestManager, DemandManager, DemandEnclosure, ProjectComplete
 from rest_framework import serializers
-from users.models import User, Group
-from tools.models import Upload
+from apps.users.models import User, Group
+from apps.tools.models import Upload
 
 
 class ProjectSerializer(serializers.ModelSerializer):

@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from rest_framework import serializers
-from jobs.models import Jobs, Deployenv, Deploycmd, DeployJobs, DeployTicket, DeployTicketEnclosure, SqlTicket, DeployResults
-from hosts.models import Host
-from users.models import User
-from tools.models import Upload
+from apps.jobs.models import Jobs, Deployenv, Deploycmd, DeployJobs, DeployTicket, DeployTicketEnclosure, \
+                             SqlTicket, DeployResults
+from apps.hosts.models import Host
+from apps.users.models import User
+from apps.tools.models import Upload
 from omsBackend.settings import sapi
 
 

@@ -1,24 +1,35 @@
 # -*- coding: utf-8 -*-
-# author: kiven
+# author: huashaw
 
 from rest_framework.routers import DefaultRouter
+from apps.records.views import RecordViewSet
+from apps.users.views import UserViewSet, RoleViewSet, GroupViewSet
+from apps.worktickets.views import WorkTicketViewSet, TicketCommentViewSet, TicketEnclosureViewSet, TicketTypeViewSet
+from apps.tools.views import UploadViewSet, SendmailViewSet, SendmessageViewSet, CalenderViewSet, FileUploadViewSet
+from apps.menus.views import FirstmenuViewSet, SecondmenuViewSet, ElementViewSet
+from apps.perms.views import UserMenuPermsViewSet, UserHostPermsViewSet, UserWikiPermsViewSet
+from apps.wikis.views import WikiViewSet
+from apps.hosts.views import HostViewSet, IdcViewSet, HostGroupViewSet
+from apps.jobs.views import JobsViewSet, DeployenvViewSet, DeploycmdViewSet, DeployJobsViewSet, DeployTicketViewSet, \
+    DeployTicketEnclosureViewSet, SqlTicketTicketViewSet, DeployResultsViewSet
+
+from apps.salts.views import SaltStateViewSet, StateJobViewSet, SaltStateGroupViewSet, SaltServerViewSet
+from apps.computer_room.views import ComputerRoomViewSet
+
 
 router = DefaultRouter()
 
-from users.views import UserViewSet, RoleViewSet, GroupViewSet
 
 router.register(r'users', UserViewSet)
 router.register(r'groups', GroupViewSet)
 router.register(r'roles', RoleViewSet)
 
-from worktickets.views import WorkTicketViewSet, TicketCommentViewSet, TicketEnclosureViewSet, TicketTypeViewSet
 
 router.register(r'worktickers', WorkTicketViewSet)
 router.register(r'ticketcomments', TicketCommentViewSet)
 router.register(r'ticketenclosures', TicketEnclosureViewSet)
 router.register(r'tickettypes', TicketTypeViewSet)
 
-from tools.views import UploadViewSet, SendmailViewSet, SendmessageViewSet, CalenderViewSet, FileUploadViewSet
 
 router.register(r'upload', UploadViewSet)
 router.register(r'sendmail', SendmailViewSet)
@@ -26,30 +37,24 @@ router.register(r'sendmessage', SendmessageViewSet)
 router.register(r'calenders', CalenderViewSet)
 router.register(r'fileupload', FileUploadViewSet)
 
-from menus.views import FirstmenuViewSet, SecondmenuViewSet, ElementViewSet
 
 router.register(r'firstmenus', FirstmenuViewSet)
 router.register(r'secondmenus', SecondmenuViewSet)
 router.register(r'menumetas', ElementViewSet)
 
-from perms.views import UserMenuPermsViewSet, UserHostPermsViewSet, UserWikiPermsViewSet
 
 router.register(r'usermenuperms', UserMenuPermsViewSet)
 router.register(r'userhostperms', UserHostPermsViewSet)
 router.register(r'userwikiperms', UserWikiPermsViewSet)
 
-from wikis.views import WikiViewSet
 
 router.register(r'wikis', WikiViewSet)
 
-from hosts.views import HostViewSet, IdcViewSet, HostGroupViewSet
 
 router.register(r'hosts', HostViewSet)
 router.register(r'idcs', IdcViewSet)
 router.register(r'hostgroups', HostGroupViewSet)
 
-from jobs.views import JobsViewSet, DeployenvViewSet, DeploycmdViewSet, DeployJobsViewSet, DeployTicketViewSet, \
-    DeployTicketEnclosureViewSet, SqlTicketTicketViewSet, DeployResultsViewSet
 
 router.register(r'jobs', JobsViewSet)
 router.register(r'deployenvs', DeployenvViewSet)
@@ -60,16 +65,13 @@ router.register(r'deploytickets', DeployTicketViewSet)
 router.register(r'deployticketenclosures', DeployTicketEnclosureViewSet)
 router.register(r'sqltickets', SqlTicketTicketViewSet)
 
-from records.views import RecordViewSet
-
 router.register(r'records', RecordViewSet)
-
-from salts.views import SaltStateViewSet, StateJobViewSet, SaltStateGroupViewSet, SaltServerViewSet
 
 router.register(r'saltstates', SaltStateViewSet)
 router.register(r'saltstategroups', SaltStateGroupViewSet)
 router.register(r'saltjobs', StateJobViewSet)
 router.register(r'saltservers', SaltServerViewSet)
+router.register(r'computerroom', ComputerRoomViewSet)
 
 # from projects.views import ProjectViewSet, ProjectCommentViewSet, ProjectEnclosureViewSet, ProjectTypeViewSet, \
 #     BugManagerViewSet, TestManagerViewSet, DemandManagerViewSet, DemandEnclosureViewSet, ProjectCompleteViewSet

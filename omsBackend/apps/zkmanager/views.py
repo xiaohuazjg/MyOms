@@ -2,9 +2,9 @@
 # author: kiven
 
 from rest_framework import viewsets
-from zkmanager.models import ZkUser, Punch, PunchSet
-from zkmanager.serializers import ZkUserSerializer, PunchSerializer, PunchSetSerializer
-from zkmanager.filters import PunchFilter
+from apps.zkmanager.models import ZkUser, Punch, PunchSet
+from apps.zkmanager.serializers import ZkUserSerializer, PunchSerializer, PunchSetSerializer
+from apps.zkmanager.filters import PunchFilter
 
 
 class ZkUserViewSet(viewsets.ModelViewSet):

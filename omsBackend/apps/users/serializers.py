@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # author: kiven
 
-from users.models import User, Role, Group
+from apps.users.models import User, Role, Group
 from rest_framework import serializers
 
 

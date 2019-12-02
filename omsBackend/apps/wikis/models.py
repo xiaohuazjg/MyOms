@@ -2,8 +2,8 @@
 # author: kiven
 
 from django.db import models
-from users.models import User, Group
-from worktickets.models import TicketType
+from apps.users.models import User, Group
+from apps.worktickets.models import TicketType
 
 admin_groups = ['admin', 'OMS_Super_Admin']
 

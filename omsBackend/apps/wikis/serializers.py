@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # author: kiven
 
-from wikis.models import Wiki
+from apps.wikis.models import Wiki
 from rest_framework import serializers
-from users.models import User, Group
-from worktickets.models import TicketType
+from apps.users.models import User, Group
+from apps.worktickets.models import TicketType
 
 
 class WikiSerializer(serializers.ModelSerializer):

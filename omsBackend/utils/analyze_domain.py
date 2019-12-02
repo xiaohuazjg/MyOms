@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 import requests
 import json

@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from django_filters import rest_framework as filters
-from tools.models import Calender
+from apps.tools.models import Calender
 
 
 class CalenderFilter(filters.FilterSet):

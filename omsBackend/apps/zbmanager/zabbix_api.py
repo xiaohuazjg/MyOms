@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 # docs: https://www.zabbix.com/documentation/3.4/zh/manual/api
 
 import requests

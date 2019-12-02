@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
-# author: itimor
+# author: huashaw
 
 from django.db import models
-from hosts.models import Host
-from users.models import User
-from tools.models import Upload
+from apps.hosts.models import Host
+from apps.users.models import User
+from apps.tools.models import Upload
 
 DEPLOY_STATUS = {
     "deploy": "发布中",
