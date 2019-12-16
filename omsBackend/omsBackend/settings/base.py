@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'apps.salts',
     'apps.records',
     'apps.computer_room',
-
+    'apps.managelink',
+    'apps.CabinetType',
+    'apps.NetworkDev',
+    'apps.Parts',
+    'apps.servers',
+    'apps.process',
+    'apps.IPResource'
 ]
 
 MIDDLEWARE = [

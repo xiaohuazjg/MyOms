@@ -15,6 +15,14 @@ from apps.jobs.views import JobsViewSet, DeployenvViewSet, DeploycmdViewSet, Dep
 
 from apps.salts.views import SaltStateViewSet, StateJobViewSet, SaltStateGroupViewSet, SaltServerViewSet
 from apps.computer_room.views import ComputerRoomViewSet
+from apps.managelink.views import ManageLinkViewSet
+from apps.CabinetType.views import CabinetViewSet
+from apps.NetworkDev.views import NetdevViewSet
+from apps.Parts.views import PartsViewSet
+from apps.servers.views import ServersViewSet, VMServersViewSet
+from apps.process.views import ProcessViewSet, IPPortBindingViewSets
+from apps.IPResource.views import IPResourceViewSet
+
 
 
 router = DefaultRouter()
@@ -72,6 +80,15 @@ router.register(r'saltstategroups', SaltStateGroupViewSet)
 router.register(r'saltjobs', StateJobViewSet)
 router.register(r'saltservers', SaltServerViewSet)
 router.register(r'computerroom', ComputerRoomViewSet)
+router.register(r'managelink', ManageLinkViewSet)
+router.register(r'cabinet', CabinetViewSet)
+router.register(r'netdev', NetdevViewSet)
+router.register(r'parts', PartsViewSet)
+router.register(r'servers', ServersViewSet)
+router.register(r'vmservers', VMServersViewSet)
+router.register(r'process', ProcessViewSet)
+router.register(r'IPPortBinding', IPPortBindingViewSets)
+router.register(r'IPResource', IPResourceViewSet)
 
 # from projects.views import ProjectViewSet, ProjectCommentViewSet, ProjectEnclosureViewSet, ProjectTypeViewSet, \
 #     BugManagerViewSet, TestManagerViewSet, DemandManagerViewSet, DemandEnclosureViewSet, ProjectCompleteViewSet
