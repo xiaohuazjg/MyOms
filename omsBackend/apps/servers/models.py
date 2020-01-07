@@ -2,7 +2,7 @@ from django.db import models
 from apps.computer_room.models import ComputerRoom
 from apps.CabinetType.models import CabinetType
 from datetime import datetime
-
+import django
 
 # Create your models here.
 
@@ -23,7 +23,8 @@ class Servers(models.Model):
                                             help_text="服务器制造商")
     servers_model = models.CharField(max_length=35, blank=True, null=True, verbose_name="服务器型号",
                                      help_text="服务器型号")
-    servers_hostname = models.CharField(max_length=36, blank=True, null=True, verbose_name="主机名", help_text="主机名")
+    servers_hostname = models.CharField(max_length=36, blank=True, null=True, verbose_name="主机名",
+                                        help_text="主机名")
     servers_business_dept = models.CharField(max_length=36, blank=True, null=True, verbose_name="所属业务部门",
                                              help_text="所属业务部门")
     servers_team = models.CharField(max_length=36, blank=True, null=True, verbose_name="所属运维小组",
@@ -40,9 +41,9 @@ class Servers(models.Model):
                                         help_text="运维主负责人")
     servers_backup_main = models.CharField(max_length=36, blank=True, null=True, verbose_name="运维备份负责人",
                                            help_text="运维备份负责人")
-    servers_procurement_date = models.DateField(default=datetime.now().date(), verbose_name="采购时间",
+    servers_procurement_date = models.DateField(default=django.utils.timezone.now, verbose_name="采购时间",
                                                 help_text="采购时间")
-    server_shelf_time = models.DateField(default=datetime.now().date(), verbose_name="上架时间",
+    server_shelf_time = models.DateField(default=django.utils.timezone.now, verbose_name="上架时间",
                                          help_text="上架时间")
     servers_cofiguration_type = models.CharField(max_length=32, verbose_name="配置类型", help_text="配置类型")
     servers_raid = models.CharField(max_length=32, verbose_name="RAID结构", help_text="RAID结构")

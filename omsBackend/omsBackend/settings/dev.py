@@ -3,7 +3,7 @@
 
 from .base import *
 import os
-
+import djcelery
 DEBUG = True
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -20,9 +20,7 @@ DATABASES = {
         'PASSWORD': '2uLaxa',  # 密码
         'HOST': '192.168.0.11',  # mysql服务所在的主机ip
         'PORT': '3306',  # mysql服务端口
-        # 'OPTIONS': {
-        #     "init_command": "SET storage_engine=INNODB;SET sql_mode='STRICT_TRANS_TABLES'"
-        # },
+        'OPTIONS': {"init_command": "SET storage_engine=INNODB", }
 
     }
 
@@ -71,9 +69,12 @@ MAIL_ACOUNT = {
 # SK = Skype(SK_ACOUNT["sk_user"], SK_ACOUNT["sk_pass"])
 SK = 'skype'
 
+
+
 REDIS_URL = 'redis://192.168.0.11:6389/'
 # REDIS_URL = 'redis://127.0.0.1:6379/'
 # celery配置
+djcelery.setup_loader()
 CELERY_BROKER_URL = REDIS_URL + '0'
 
 # celery结果返回，可用于跟踪结果

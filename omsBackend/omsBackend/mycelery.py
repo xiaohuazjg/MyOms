@@ -3,7 +3,7 @@
 
 from __future__ import absolute_import, unicode_literals
 import os
-
+from django.conf import settings
 from celery import Celery
 
 # set the default Django settings module for the 'celery' program.
@@ -15,5 +15,5 @@ celery_app = Celery('omsBackend', result_backend='django-db')
 #   should have a `CELERY_` prefix.
 celery_app.config_from_object('django.conf:settings', namespace='CELERY')
 # Load task modules from all registered Django app configs.
-celery_app.autodiscover_tasks()
+celery_app.autodiscover_tasks(lambda: settings.INSTALLED_APPS)
 celery_app.loader.override_backends['django-db'] = 'django_celery_results.backends.database:DatabaseBackend'

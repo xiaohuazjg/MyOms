@@ -22,7 +22,9 @@ from apps.Parts.views import PartsViewSet
 from apps.servers.views import ServersViewSet, VMServersViewSet
 from apps.process.views import ProcessViewSet, IPPortBindingViewSets
 from apps.IPResource.views import IPResourceViewSet
-
+from apps.Supplier.views import SupplierViewSet
+from apps.contract.views import ContractViewSet, ContractExpireViewSet
+from apps.bizmodule.views import BizModuleViewSet
 
 
 router = DefaultRouter()
@@ -89,6 +91,12 @@ router.register(r'vmservers', VMServersViewSet)
 router.register(r'process', ProcessViewSet)
 router.register(r'IPPortBinding', IPPortBindingViewSets)
 router.register(r'IPResource', IPResourceViewSet)
+router.register(r'supplier', SupplierViewSet)
+router.register(r'contract', ContractViewSet)
+router.register(r'expire', ContractExpireViewSet)
+router.register(r'biz', BizModuleViewSet)
+
+
 
 # from projects.views import ProjectViewSet, ProjectCommentViewSet, ProjectEnclosureViewSet, ProjectTypeViewSet, \
 #     BugManagerViewSet, TestManagerViewSet, DemandManagerViewSet, DemandEnclosureViewSet, ProjectCompleteViewSet

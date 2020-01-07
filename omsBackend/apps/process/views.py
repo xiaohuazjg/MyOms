@@ -10,7 +10,7 @@ from apps.process.models import Process, IPPortBinding
 
 
 class ProcessViewSet(viewsets.ModelViewSet):
-    filter_backends = (SearchFilter,DjangoFilterBackend,ProcessFilterBackend)
+    filter_backends = (SearchFilter, DjangoFilterBackend, ProcessFilterBackend)
     serializer_class = ProcessSerlizer
     queryset = Process.objects.all()
     filter_fields = ['process_name', 'process_version', 'process_default_boot', 'process_type', 'process_quantity',

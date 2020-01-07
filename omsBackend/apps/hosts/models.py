@@ -30,8 +30,10 @@ class Host(models.Model):
     gateway = models.CharField(max_length=20, null=True, blank=True, verbose_name=u"网关")
     groups = models.ManyToManyField('HostGroup', blank=True, related_name='host_group', verbose_name=u'主机组')
     idc = models.ForeignKey('Idc', on_delete=models.SET_NULL, null=True, blank=True, verbose_name=u"机房")
-    asset_type = models.CharField(choices=tuple(ASSET_TYPE.items()), default='physical', max_length=30, verbose_name=u"设备类型")
-    status = models.CharField(choices=tuple(ASSET_STATUS.items()), default='noused', max_length=30, verbose_name=u"设备状态")
+    asset_type = models.CharField(choices=tuple(ASSET_TYPE.items()), default='physical', max_length=30,
+                                  verbose_name=u"设备类型")
+    status = models.CharField(choices=tuple(ASSET_STATUS.items()), default='noused', max_length=30,
+                              verbose_name=u"设备状态")
     os = models.CharField(max_length=30, null=True, blank=True, verbose_name=u"操作系统")
     cpu = models.CharField(max_length=100, null=True, blank=True, verbose_name=u"CPU信息")
     memory = models.CharField(max_length=30, null=True, blank=True, verbose_name=u"内存信息")

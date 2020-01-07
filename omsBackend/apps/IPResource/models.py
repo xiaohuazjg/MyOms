@@ -21,9 +21,9 @@ class IPResource(models.Model):
     IP_Address = models.CharField(max_length=35, unique=True, blank=False, null=False, verbose_name="IP地址",
                                   help_text="IP地址")
     IP_Mask = models.CharField(max_length=35, blank=False, null=False, verbose_name="掩码地址", help_text="掩码地址")
-    IP_Affiliated_link = models.ForeignKey(ManageLink, on_delete= models.SET_NULL, blank=True, null=True,
+    IP_Affiliated_link = models.ForeignKey(ManageLink, on_delete=models.SET_NULL, blank=True, null=True,
                                            related_name="ip_link", verbose_name="所属链路", help_text="所属链路")
-    IP_Affiliated_Room = models.ForeignKey(ComputerRoom, on_delete= models.SET_NULL, blank=True, null=True,
+    IP_Affiliated_Room = models.ForeignKey(ComputerRoom, on_delete=models.SET_NULL, blank=True, null=True,
                                            related_name="ip_room", verbose_name="所属机房", help_text="所属机房")
     IP_Status = models.CharField(max_length=32, choices=IP_State, verbose_name="IP地址状态", help_text="IP地址状态")
 

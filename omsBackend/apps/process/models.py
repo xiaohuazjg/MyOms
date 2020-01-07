@@ -1,9 +1,9 @@
 from django.db import models
 from apps.servers.models import Servers, VMServers
 # Create your models here.
+from mptt.models import MPTTModel, TreeForeignKey
 
-
-class Process(models.Model):
+class Process(MPTTModel):
     process_name = models.CharField(max_length=32, verbose_name="进程名", help_text="进程名")
     process_version = models.CharField(max_length=32, verbose_name="进程版本", help_text="进程版本")
     process_default_boot = models.CharField(max_length=132, verbose_name="默认启动路径", help_text="默认启动路径")
@@ -16,7 +16,7 @@ class Process(models.Model):
     process_binding_IP = models.CharField(max_length=32, verbose_name="绑定IP ", help_text="0.0.0.0，或者具体的 IP")
     process_port_type = models.CharField(max_length=32, verbose_name="端口类型", help_text="对内还是对外")
     process_agreement = models.CharField(max_length=32, verbose_name="协议", help_text="协议")
-    process_affiliated_process = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL,
+    process_affiliated_process = TreeForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL,
                                                    verbose_name="所属进程", help_text="属于什么进程")
     process_is_enabled = models.BooleanField(verbose_name="是否启用", help_text="启用、禁用")
     process_server = models.ForeignKey(Servers, null=True, blank=True, on_delete=models.SET_NULL,
@@ -27,7 +27,7 @@ class Process(models.Model):
     def __str__(self):
         return self.process_name
 
-    class Meta:
+    class MPTTMeta:
         verbose_name = "进程"
         verbose_name_plural = "进程"
 

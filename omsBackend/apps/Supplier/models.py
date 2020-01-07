@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Supplier(models.Model):
     supplier_no = models.CharField(max_length=35, verbose_name="供应商编号", help_text="供应商编号")
     supplier_name = models.CharField(max_length=35, verbose_name="供应商名称", help_text="供应商名称")

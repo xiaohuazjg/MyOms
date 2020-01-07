@@ -28,8 +28,8 @@ class CabinetType(models.Model):
     cabinet_room = models.ForeignKey(ComputerRoom, on_delete=models.SET_NULL, null=True, blank=True,
                                     related_name='cabinet_room', verbose_name=u'所属机房')
     cabinet_floor = models.CharField(max_length=128, blank=True, null=True, help_text="所在楼层", verbose_name="所在楼层")
-    cabinet_state = models.CharField(choices=Cabinet_Status.items(), max_length=32, default="inusing",
-                                  verbose_name="机柜状态", help_text="机柜状态")
+    cabinet_state = models.CharField(choices=tuple(Cabinet_Status.items()), max_length=32, default="inusing",
+                                     verbose_name="机柜状态", help_text="机柜状态")
     cabinet_memo = models.CharField(null=True, max_length=256, verbose_name="备注", help_text="备注")
     cabinet_procurement_time = models.DateTimeField(default=datetime.now, verbose_name="采购时间", help_text="采购时间")
 

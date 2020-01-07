@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 # Create your models here.
+import django
 
 
 class Parts(models.Model):
@@ -16,7 +17,7 @@ class Parts(models.Model):
     parts_asset_no = models.CharField(max_length=32,  blank=True, null=True, verbose_name="所属资产编号",
                                       help_text="所属资产编号")
     parts_status = models.CharField(max_length=16, blank=True, verbose_name="配件状态", help_text="配件状态")
-    parts_date = models.DateField(default=datetime.now().date(), verbose_name="采购日期", help_text="采购日期")
+    parts_date = models.DateField(default=django.utils.timezone.now, verbose_name="采购日期", help_text="采购日期")
     parts_remarks = models.TextField(max_length=2048, verbose_name="备注", help_text="备注")
 
     def __str__(self):

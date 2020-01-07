@@ -6,6 +6,7 @@ import sys
 import datetime
 from logging.config import dictConfig
 
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 sys.path.insert(0, BASE_DIR)
@@ -26,6 +27,7 @@ INSTALLED_APPS = [
     'corsheaders',  # 跨域
     'django_python3_ldap',  # ldap认证
     'dry_rest_permissions',  # 权限
+    'djcelery',
     'django_celery_results',  # celery results
     'apps.users',
     'apps.worktickets',
@@ -44,7 +46,11 @@ INSTALLED_APPS = [
     'apps.Parts',
     'apps.servers',
     'apps.process',
-    'apps.IPResource'
+    'apps.IPResource',
+    'apps.Supplier',
+    'apps.contract',
+    'apps.bizmodule',
+    'mptt',
 ]
 
 MIDDLEWARE = [
@@ -251,3 +257,5 @@ LOGGING = {
 }
 
 dictConfig(LOGGING)
+
+
