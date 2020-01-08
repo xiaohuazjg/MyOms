@@ -1,5 +1,5 @@
 import request from '@/utils/request'
-import { apiuri } from '@/config'
+import {apiuri} from '@/config'
 
 // users
 export function postUser(data) {

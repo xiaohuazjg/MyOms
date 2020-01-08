@@ -10,5 +10,5 @@ from apps.bizmodule.serializers import BizModuleSerializer
 class BizModuleViewSet(viewsets.ModelViewSet):
     queryset = BizModule.objects.all()
     serializer_class = BizModuleSerializer
-    filter_fields = ['biz_code', 'biz_name', 'biz_parent']
-    search_fields = ['biz_code', 'biz_name', 'biz_parent']
+    filter_fields = ['biz_code', 'biz_name', 'parent']
+    search_fields = ['biz_code', 'biz_name', 'parent']

@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'dry_rest_permissions',  # 权限
     'djcelery',
     'django_celery_results',  # celery results
+    'mptt',
     'apps.users',
     'apps.worktickets',
     'apps.menus',
@@ -50,7 +51,7 @@ INSTALLED_APPS = [
     'apps.Supplier',
     'apps.contract',
     'apps.bizmodule',
-    'mptt',
+
 ]
 
 MIDDLEWARE = [
